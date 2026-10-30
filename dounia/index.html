@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Happy 18th Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- Envelope intro -->
+<div class="intro" id="intro">
+  <p class="eyebrow">A little something for</p>
+  <h2 class="intro-name" id="intro-name">Sis</h2>
+  <button class="env-btn" id="env-btn" type="button" aria-label="Open the envelope">
+    <span class="env" aria-hidden="true">
+      <span class="env-back"></span>
+      <span class="env-card"><b id="env-age">18</b></span>
+      <span class="env-front"></span>
+      <span class="env-flap"></span>
+    </span>
+  </button>
+  <p class="intro-hint">Tap the envelope</p>
+</div>
+
+<button class="music-btn" id="music" type="button" hidden>Music off</button>
+
+<div class="wrap">
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+    <div class="hero-text">
+      <p class="eyebrow">Today is all about you</p>
+      <h1>Happy Birthday<span class="name" id="name">Sis</span></h1>
+      <p class="lede" id="lede"></p>
+      <button class="btn" id="blow" type="button">Blow out the candles</button>
+      <p class="wish" id="wish" aria-live="polite"></p>
+    </div>
+
+    <div class="hero-cake">
+      <div class="cake-stage">
+        <div class="age" aria-label="Age"><small>Turning</small><b id="age">18</b></div>
+        <svg id="cake" viewBox="0 0 320 300" role="img" aria-label="A pink birthday cake with three lit candles">
+          <ellipse cx="160" cy="272" rx="148" ry="16" fill="var(--line)"/>
+          <rect x="52" y="190" width="216" height="76" rx="14" fill="var(--deep)"/>
+          <rect x="70" y="130" width="180" height="66" rx="14" fill="var(--accent)"/>
+          <rect x="88" y="80" width="144" height="56" rx="14" fill="var(--blush)"/>
+          <g id="drips"></g>
+          <g id="sprinkles"></g>
+          <g id="candles">
+            <rect x="126" y="48" width="8" height="34" rx="3" fill="var(--candle)"/>
+            <rect x="156" y="42" width="8" height="40" rx="3" fill="var(--candle)"/>
+            <rect x="186" y="48" width="8" height="34" rx="3" fill="var(--candle)"/>
+            <path d="M126 58 l8 -5 M126 68 l8 -5 M156 54 l8 -5 M156 64 l8 -5 M186 58 l8 -5 M186 68 l8 -5" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <path class="flame" d="M130 24 q9 12 0 24 q-9 -12 0 -24z" fill="#FFB020"/>
+            <path class="flame" d="M160 18 q9 12 0 24 q-9 -12 0 -24z" fill="#FFB020"/>
+            <path class="flame" d="M190 24 q9 12 0 24 q-9 -12 0 -24z" fill="#FFB020"/>
+            <g class="smoke" stroke="var(--ink-soft)" stroke-width="2" fill="none" stroke-linecap="round">
+              <path d="M130 40 q-6 -8 0 -16 q6 -8 0 -16"/>
+              <path d="M160 34 q-6 -8 0 -16 q6 -8 0 -16"/>
+              <path d="M190 40 q-6 -8 0 -16 q6 -8 0 -16"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live counter -->
+  <section id="alive" aria-labelledby="alive-title">
+    <div class="section-head">
+      <p class="eyebrow" id="alive-eyebrow"></p>
+      <h2 id="alive-title"></h2>
+    </div>
+    <div class="counter">
+      <div class="tile"><b id="c-days">0</b><span>Days</span></div>
+      <div class="tile"><b id="c-hours">0</b><span>Hours</span></div>
+      <div class="tile"><b id="c-mins">0</b><span>Minutes</span></div>
+      <div class="tile"><b id="c-secs">0</b><span>Seconds</span></div>
+    </div>
+    <p class="alive-sub" id="alive-sub"></p>
+  </section>
+
+  <!-- Reasons -->
+  <section aria-labelledby="reasons-title">
+    <div class="section-head">
+      <p class="eyebrow">A short list</p>
+      <h2 id="reasons-title">Reasons you are the best</h2>
+    </div>
+    <div class="reasons" id="reasons"></div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline-section" aria-labelledby="timeline-title">
+    <div class="section-head">
+      <p class="eyebrow">So far</p>
+      <h2 id="timeline-title">Eighteen years in two stops</h2>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <!-- Letter -->
+  <section aria-labelledby="letter-title">
+    <div class="section-head">
+      <p class="eyebrow">From me to you</p>
+      <h2 id="letter-title">A few words</h2>
+    </div>
+    <article class="letter">
+      <div class="letter-body" id="letter-body"></div>
+      <p class="sign" id="from"></p>
+    </article>
+  </section>
+
+  <!-- Photos -->
+  <section aria-labelledby="memories-title">
+    <div class="section-head">
+      <p class="eyebrow">Favorites</p>
+      <h2 id="memories-title">Moments I keep</h2>
+    </div>
+    <div class="polaroids" id="polaroids"></div>
+  </section>
+
+  <!-- Game: balloons -->
+  <section id="balloon-section" aria-labelledby="balloon-title">
+    <div class="section-head">
+      <p class="eyebrow">Game one</p>
+      <h2 id="balloon-title">Pop the balloons</h2>
+    </div>
+    <p class="meta"><span id="popped">0</span> of <span id="balloon-total">0</span> popped</p>
+    <div class="balloons" id="balloons"></div>
+    <p class="balloon-msg" id="balloon-msg" aria-live="polite">Every balloon holds a wish. Pick one.</p>
+    <button class="btn-ghost" id="balloon-reset" type="button" hidden>Pop them again</button>
+  </section>
+
+  <!-- Game: scratch card -->
+  <section aria-labelledby="scratch-title">
+    <div class="section-head">
+      <p class="eyebrow">Game two</p>
+      <h2 id="scratch-title">Scratch your prize</h2>
+    </div>
+    <div class="scratch" id="scratch">
+      <div class="scratch-prize">
+        <p class="eyebrow">You won</p>
+        <p class="prize-text" id="prize"></p>
+      </div>
+      <canvas id="scratch-canvas" aria-hidden="true"></canvas>
+    </div>
+    <button class="btn-ghost" id="scratch-reveal" type="button">Reveal it for me</button>
+  </section>
+
+  <!-- Game: wheel -->
+  <section id="wheel-section" aria-labelledby="wheel-title">
+    <div class="section-head">
+      <p class="eyebrow">Game three</p>
+      <h2 id="wheel-title">Spin the wheel</h2>
+    </div>
+    <div class="wheel-wrap">
+      <div class="wheel-stage">
+        <span class="wheel-pointer" aria-hidden="true"></span>
+        <div class="wheel-disc"><canvas id="wheel" aria-hidden="true"></canvas></div>
+      </div>
+      <div class="wheel-side">
+        <button class="btn" id="spin" type="button">Spin</button>
+        <p class="balloon-msg wheel-result" id="wheel-result" aria-live="polite">Tap spin and see what you win.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Game: memory -->
+  <section aria-labelledby="memory-title">
+    <div class="section-head">
+      <p class="eyebrow">Game four</p>
+      <h2 id="memory-title">Find the pairs</h2>
+    </div>
+    <p class="meta"><span id="moves">0</span> moves</p>
+    <div class="memory" id="memory"></div>
+    <p class="balloon-msg memory-msg" id="memory-msg" aria-live="polite" hidden></p>
+    <button class="btn-ghost" id="memory-reset" type="button">Shuffle again</button>
+  </section>
+
+  <!-- Gift -->
+  <section aria-labelledby="gift-title">
+    <div class="section-head">
+      <p class="eyebrow">One more thing</p>
+      <h2 id="gift-title">Open your gift</h2>
+    </div>
+    <div class="gift" id="gift">
+      <button class="gift-btn" id="gift-btn" type="button" aria-expanded="false" aria-controls="gift-note" aria-label="Open the gift box">
+        <svg viewBox="0 0 160 150" aria-hidden="true">
+          <rect x="20" y="70" width="120" height="72" rx="6" fill="var(--accent)"/>
+          <rect x="72" y="70" width="16" height="72" fill="var(--blush)"/>
+          <g class="lid">
+            <rect x="12" y="46" width="136" height="28" rx="6" fill="var(--deep)"/>
+            <rect x="72" y="46" width="16" height="28" fill="var(--blush)"/>
+            <path d="M80 46 C60 14 36 22 48 40 C54 48 72 46 80 46z" fill="var(--blush)"/>
+            <path d="M80 46 C100 14 124 22 112 40 C106 48 88 46 80 46z" fill="var(--blush)"/>
+          </g>
+        </svg>
+      </button>
+      <p class="gift-hint" id="gift-hint">Tap the box.</p>
+      <p class="gift-note" id="gift-note" hidden></p>
+    </div>
+  </section>
+
+  <footer>
+    <p id="footer"></p>
+  </footer>
+</div>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

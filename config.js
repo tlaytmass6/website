@@ -38,10 +38,10 @@ const CONFIG = {
   from: 'Love, your sibling',
 
   photos: [
-    { caption: 'Thoughtful', src: 'images/22.7.HEIC' },
-    { caption: '31.10.2025', src: 'images/31,10.heic' },
-    { caption: 'Us in a different country', src: 'images/mall.HEIC' },
-    { caption: 'Family pic', src: 'images/IMG_5771.HEIC'}
+    { caption: 'Thoughtful', src: 'photo1.jpg' },
+    { caption: '31.10.2025', src: 'photo2.jpg' },
+    { caption: 'Us in a different country', src: 'photo3.jpg' },
+    { caption: 'Family pic', src: 'photo4.jpg'}
   ],
 
   // One balloon per message. 18 messages for 18 years works well.
